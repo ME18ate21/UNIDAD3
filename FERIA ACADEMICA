@@ -1,0 +1,71 @@
+<script>
+
+    alert("! Bienvenido a Coffe Store !")
+    menu=prompt("Menu interactivo \n1.- Realizar una compra \n2.- Guardar Productos \n3.- Salir")
+
+    switch (menu) {
+    case "1":
+          venta();
+        break;
+    
+    case "2":
+        let guardar=guardarproductos();
+        console.log(guardar);
+        
+        break;
+
+    case "3":
+        Cerrar();
+          break;
+
+  }
+
+  
+//variables
+var producto;
+var precio = 0;
+var pago = 0;
+var cambio = 0;
+
+//funcion para poder calcular la venta de un producto otorgando el cambio 
+function venta() {
+
+producto=prompt("Ingresa el nombre del producto:");
+
+precio=prompt("Costo:");
+
+pago=prompt("Recibo:");
+
+cambio=pago-precio;
+
+prompt("Tu cambio es:" + cambio);
+
+alert("Gracias vuelva pronto:")
+
+}
+
+//Guardar productos simulando una base de datos para tener un registro controlado de todos los productos de la tienda
+function guardarproductos() {
+
+  let  RegistrodelProducto=prompt("Ingresa el nombre del producto");
+  let  RegistrodelPrecio=prompt("Ingresa el precio:");
+  let  RegistrodeMarca=prompt("Ingresa la marca:");
+
+  let guardarregistro
+  ={
+       Nombre_del_Producto: RegistrodelPrecio,
+       Precio: RegistrodelPrecio,
+       Marca: RegistrodeMarca,
+              
+  }
+
+       return guardarregistro;  
+}
+
+function cerrar() {
+
+  window.close();
+  
+}
+
+</script>
