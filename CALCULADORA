@@ -1,0 +1,61 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+
+            String resp = "";
+            do
+            {
+
+            } while (resp == "si" || resp == "si");
+
+            int num1 = 0;
+            int num2 = 0;
+            int total = 0;
+
+            Console.WriteLine("Calculadora");
+            Console.WriteLine("SM.- Para sumar");
+            Console.WriteLine("RT.- Para restar");
+            Console.WriteLine("MP.- Para multiplicar");
+            Console.WriteLine("DV.- Para dividir");
+            Console.Write("Ingrese Opcion elegida:");
+            resp = Console.ReadLine();
+
+            String eleccion = Convert.ToString(resp);
+
+            Console.WriteLine("Ingresa dos Valores");
+            Console.Write("Primer Valor: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.Write("Segundo Valor: ");
+            num2 = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            switch (eleccion)
+            {
+                case "SM":
+                    Console.WriteLine("El resultado de la suma es:");
+                    total = num1 + num2;
+                    Console.WriteLine(total);
+                    break;
+
+                case "RT":
+                    Console.WriteLine("El resultado de la resta es:");
+                    total = num1 - num2;
+                    Console.WriteLine(total);
+                    break;
+
+                case "MP":
+                    Console.WriteLine("El resultado de la multiplicacion es:");
+                    total = num1 * num2;
+                    Console.WriteLine(total);
+                    break;
+
+                case "DV":
+                    Console.WriteLine("El resultado de la division es:");
+                    total = num1 / num2;
+                    Console.WriteLine(total);
+                    break;
+            }
+        }
+    }
+}
